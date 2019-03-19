@@ -32,7 +32,6 @@
       <meta name="msapplication-square310x310logo" content="images/favicon/mstile-310x310.png" />
 
 
-
     </head>
     <body>
       <!-- header start here -->
@@ -45,14 +44,9 @@
           </div>
           <nav class="navigation">
             <ul>
+             
               <li>
-                <a href="javascript:void(0);">Home</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">About us</a>
-              </li>
-              <li>
-                <a href="javascript:void(0);">Contact us</a>
+                Contact us at: <a href="mailto:info@trelloreminders.com">info@trelloreminders.com</a>
               </li>
 
             </ul>
@@ -65,7 +59,7 @@
       <section class="banner">
         <div class="banner-bg" style="background-image:url('images/main-banner.png')" ></div>
         <div class="banner-container">
-
+          
           <div class="banner-content">
             <div class="dt">
               <div class="dtc">
@@ -74,18 +68,20 @@
                   your cards?</h1>
                   <p> Now, with Trello Reminders, you can: </p>
                   <p>- Set reminders on your Trello cards</p>
-                  <p>- Receive notifications on iOS and Android</p>
+                  <p>- Receive emails when the time is up</p>
                   <div class="app-link">
                     <a href="javascript:void(0);">
                       <i class="icon">
-                        <img src="images/apple-logo.svg">
+                        <img src="images/chrome.svg">
                       </i>
                       <div class="app-link-content">
-                        <span>Download on</span>
-                        <p>App Store</p>
+                        <span>Install</span>
+                        <p>Chrome Extension</p>
                       </div>
+
                     </a>
-                    <a href="javascript:void(0);">
+                    <p class="product-pricing" style="margin-top:6px" >Only $9.99 per month</p>
+                    <a href="javascript:void(0);" style="display:none;" >
                       <i class="icon">
                         <img src="images/android-logo.svg">
                       </i>
@@ -99,7 +95,14 @@
               </div>
           </div>
           <div class="app-img">
-            <img src="images/set-a-reminder.png">
+            <div class="flexslider">
+              <ul class="slides">
+                <li><img src="images/step-1.png"></li>
+                <li><img src="images/step-2.png"></li>
+                <li><img src="images/step-3.png"></li>
+              </ul>
+            </div>
+            
           </div>
           <div class="contact-link">
             <i class="icon">
@@ -107,12 +110,14 @@
             </i>
             <p>
               Contact us:
-              <a href="javascript:void(0);"> info@trelloreminders.com</a>
+              <a href="mailto:info@trelloreminders.com"> info@trelloreminders.com</a>
             </p>  
           </div>
         </div>
       </section> 
-      <!-- banner end here --> 
+      <!-- banner end here -->
+
+     
       <!-- footer section start here -->
       <footer class="footer">
           <div class="footer-top">
@@ -161,10 +166,7 @@
           <div class="footer-mid">
             <div class="container">
               <ul class="footer-links" >
-                <li><a href="javascript:void(0);">Home</a></li>
-                <li><a href="javascript:void(0);">About us</a></li>
-                <li><a href="javascript:void(0);">How to use</a></li>
-                <li><a href="javascript:void(0);">Contact us</a></li>
+                <li>Contact us at: <a href="mailto:info@trelloreminders.com">info@trelloreminders.com</a></li>
               </ul>
               <div class="subscribe">
                 <form>
@@ -186,5 +188,23 @@
           </div>
       </footer>
       <!-- footer section end here -->
+      <!-- jQuery -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  
+  <!-- FlexSlider -->
+  <script defer src="js/jquery.flexslider.js"></script>
+
+  <script type="text/javascript">
+   
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
     </body>
   </html>
