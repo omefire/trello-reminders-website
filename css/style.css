@@ -10,18 +10,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
  }
-.app-link img {width:42px;}
-.app-img img {width:100%;}
-.app-img {
-	display:inline-block;
-	vertical-align: middle;
-    right: 0px;
-    top: 50px;
-    width: 50%;
-    padding: 5px;
-    background: #fff;
-    border-radius: 4px;
-}
+
 .container {
 	max-width:1280px;
 	padding:0 15px;
@@ -92,42 +81,8 @@
 	opacity:.1;
 	z-index: -1;
 }
-.flex-direction-nav {
-	position: absolute;
-    top: 50%;
-    margin-top: -8px;
-    width:100%;
-    list-style: none;
-}
-.flexslider {position:relative;}
-.flex-direction-nav  li a {
-	font-size:0px;
-	background-image:url(../images/arrow.svg);
-	background-repeat:no-repeat;
-	background-color:rgba(0,0,0,.2);
-	padding:10px;
-	border-radius:100px;
-	background-size:20px;
-	width:35px;
-	background-position:center;
-	height:35px;
-	opacity:.6;
-	transition: all .4s;
-	display:inline-block;
-}
-.flex-direction-nav  li a.flex-prev {
-	transform:rotate(180deg);
-}
-.flex-direction-nav  li a.flex-next {
-	right:8px;
-	position: absolute;
-	top:9px;
-}
-.flex-direction-nav  li a:hover{
-	opacity:.9;
-}
 .banner-container {
-	max-width:1280px;
+	max-width:1200px;
 	display:block;
 	position:relative;
 	height:100%;
@@ -138,42 +93,15 @@
 	content:'';
 	display:block;
 }
-.flex-control-nav {
-	width:100%;
-	text-align:center;
-}
-ol.flex-control-nav  {
-	list-style: none;
-	margin:0px;
-	padding:0px 0px 5px 0;
-}
-ol.flex-control-nav li {
-	display:inline-block;
-	padding:0px 5px 5px;
-}
-ol.flex-control-nav li a {
-	text-decoration: none;
-	font-size:0px;
-	width:8px;
-	height:8px;
-	border-radius:100px;
-	background:rgba(0,0,0,.6);
-	display:inline-block;
-	transition: all .4s;
-}
 
-ol.flex-control-nav li a:hover {
-	transform: scale(1.3);
-	background:rgba(0,0,0,.8);
-}
 .banner-content {
-	max-width:calc(50% - 6px);
+	max-width:700px;
+	position:absolute;
 	height:100%;
-	padding-right:20px;
+	padding:0 20px;
 	top:0px;
 	left:0px;
-	display:inline-block;
-	vertical-align: middle;
+	float:left;
 }
 
 .banner-content .dt {
@@ -233,7 +161,13 @@ ol.flex-control-nav li a:hover {
 	color:#fff;
 	font-weight:600;
 }
-
+.app-img {
+	float:right;
+	position:absolute;
+	right:0px;
+	top:50px;
+	padding:0 20px;
+}
 .app-img img{
 	max-width:100%;
 }
@@ -262,7 +196,7 @@ ol.flex-control-nav li a:hover {
 .footer {
 	float:left;
 	width:100%;
-	margin-top:70px;
+	margin-top:200px;
 }
 .footer-top {
 	float:left;
@@ -364,32 +298,13 @@ ol.flex-control-nav li a:hover {
 	margin-right:30px;
 }
 
-.how-to-use {
-	border-top:1px solid #f7f7f7;
-	padding-top:60px;
-	margin-top: 260px;
-    float: left;
-    width: 100%;
-    text-align:center;
-} 
-
-.how-to-use h1 {
-	text-align:center;
-	margin-bottom:40px;
-	font-size:42px;
-}
-
-.how-to-use .steps {width:50%; padding:20px; float:left; text-align:center;}
-.how-to-use .steps img {width:100%; border-radius:10px;}
-.how-to-use .steps h2 { margin-bottom:20px;}
-.how-to-use .steps p {font-size:16px; text-align:center; margin-top:20px;line-height:1.7;}
-.how-to-use  .app-link {width:auto; float:none; display:inline-block; margin-right:auto; margin-left:auto; text-align:left;}
-
 @media screen and (max-width:1200px) {
 	.banner-content {
 		width:60%;
 	}
-	
+	.app-img {
+		max-width:40%;
+	}
 	.banner-content h1 {
 		font-size:38px;
 		margin-bottom:30px;
@@ -410,8 +325,20 @@ ol.flex-control-nav li a:hover {
 	.banner-content {
 		width:70%;
 	}
-	
-	
+	.app-img {
+		max-width:30%;
+		height:100%;
+		width:30%;
+		top:0px;
+	}
+	.app-img img {
+		right:0px;
+		margin:auto;
+		top:0px;
+		bottom:0px;
+		left:0px;
+		position:absolute;
+	}
 	.banner-content h1 {
 		font-size:32px;
 	}
@@ -451,8 +378,19 @@ ol.flex-control-nav li a:hover {
 		position:static;
 		float:left;
 	}
-	
-
+	.app-img {
+		position:static;
+		float:left;
+		max-width:100%;
+		width:100%;
+		margin-top:30px;
+	}
+	.app-img img {
+		position:static;
+		max-width:100%;
+		width:320px;
+		display:block;	
+	}
 	.banner {
 		height:auto;
 		padding:40px 0;
@@ -518,13 +456,8 @@ ol.flex-control-nav li a:hover {
 		width:100%;
 	}
 }
-@media screen and (max-width:766px) {
-
-}
 @media screen and (max-width:620px) {
-	.banner-content {width:100%; max-width:100%; padding-left:20px;}
-	.app-img {max-width:calc(100% - 40px); margin-left:20px; width:100%; margin-top:20px; }
-	.app-link-content {text-align:left ;}
+	
 }
 
 @media screen and (max-width:550px) {
